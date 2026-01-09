@@ -1,0 +1,45 @@
+{
+  "short_name": "GlobalSync",
+  "name": "GlobalSync AI - Final Edition",
+  "description": "Chapter 7: Full messaging suite with side-by-side AI translation, offline caching, push notifications, and enterprise security.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2B2F36",
+  "background_color": "#2B2F36",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "notifications",
+    "speaker-selection"
+  ],
+  "permissions": [
+    "camera",
+    "microphone",
+    "notifications"
+  ],
+  "orientation": "portrait",
+  "categories": [
+    "productivity",
+    "communication",
+    "business"
+  ]
+}

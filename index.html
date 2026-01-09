@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover, interactive-widget=resizes-content">
+    <title>GlobalSync AI - Final Chapter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/index.css">
+
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+
+    <script>
+        // Tailwind Configuration
+        window.tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#007BFF',
+                        dark: '#2B2F36',
+                        accent: '#39FF14',
+                        muted: '#6B7280',
+                        border: '#3A3F47',
+                        paddle: '#2D2D2D',
+                        glass: 'rgba(43, 47, 54, 0.6)'
+                    },
+                    animation: {
+                        'glow': 'glow 2s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'slide-up': 'slideUp 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(0, 123, 255, 0.3)' },
+                            '50%': { boxShadow: '0 0 40px rgba(0, 123, 255, 0.6)' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(10px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <style>
+        body { 
+            background-color: #2B2F36; 
+            color: #FFFFFF; 
+            font-family: 'Inter', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden; 
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .glass-panel {
+            background: rgba(43, 47, 54, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sidebar-transition { transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .pricing-card-popular { border: 2px solid #007BFF; position: relative; }
+        .pricing-card-popular::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #007BFF;
+            color: white;
+            font-size: 10px;
+            font-weight: 900;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 1px;
+            z-index: 10;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #3A3F47; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6B7280; }
+        
+        /* Safe Area Insets for Mobile App */
+        .safe-top { padding-top: env(safe-area-inset-top); }
+        .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@19.0.0",
+        "react-dom": "https://esm.sh/react-dom@19.0.0",
+        "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+        "lucide-react": "https://esm.sh/lucide-react@0.460.0",
+        "@google/genai": "https://esm.sh/@google/genai@1.2.0",
+        "@supabase/supabase-js": "https://esm.sh/@supabase/supabase-js@2.45.4"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="module" src="/index.tsx"></script>
+
+    <script>
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.error('Global Error: ', msg, ' at ', url, ':', lineNo);
+            return false;
+        };
+    </script>
+</body>
+</html>
